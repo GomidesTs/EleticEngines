@@ -1,0 +1,4 @@
+dependencias.pyc
+**/__pycache__
+**/migrations
+venv/
