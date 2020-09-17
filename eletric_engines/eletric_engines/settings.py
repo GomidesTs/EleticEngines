@@ -132,9 +132,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_DIRS = (
-    (BASE_DIR, 'django_project', 'static'),
-)
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+    '/var/www/static/',
+]
 
 # Crispy Forms
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
