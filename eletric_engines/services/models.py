@@ -9,7 +9,7 @@ class Services(models.Model):
     number = models.IntegerField()
     zipe_code = models.CharField(max_length=8)
     reference = models.CharField(max_length=150)
-    request_dade = models.DateField()
+    request_date = models.DateField()
     delivery_date = models.DateField()
 
     def __str__(self):
