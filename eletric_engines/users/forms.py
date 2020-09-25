@@ -5,7 +5,7 @@ from django import forms
 class Record(UserCreationForm, forms.Form):
     class Meta:
         model = User
-        filds = fields = ['username', 'first_name', 'last_name', 'email']
+        fields = ['username', 'first_name', 'last_name', 'email']
 
     first_name = forms.CharField(max_length=20, min_length=3,required=True)
     last_name = forms.CharField(max_length=20, min_length=3,required=True),
