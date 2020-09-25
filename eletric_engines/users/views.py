@@ -7,9 +7,8 @@ from django.shortcuts import get_object_or_404
 # Create your views here.
 
 class Registration(CreateView):
-   
     template_name = 'registration_useres/registration_useres.html'
-    form_class = Record
+    form_class = UpdateGrup
     success_url = reverse_lazy('login')
 
     def form_valid(self, form):
@@ -18,8 +17,7 @@ class Registration(CreateView):
         self.object.groups.add(grupo)
         self.object.save()
         return url
-
-
+    
 class GrupUpdate(UpdateView):
     model = User
     fields= ['username', 'email']
